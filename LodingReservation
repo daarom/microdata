@@ -2,10 +2,10 @@
 <!-- whether the "a" property comes before the "b" property or not is not important: -->
 <!-- http://www.w3.org/TR/microdata/ -->
 
-<div itemscope id="vincentlogo">
+<div id="vincentlogo"><span id="vincentlogo">
   <img itemprop="logo" src="http://www.example.com/logo.png" />
   <a itemprop="url" href="http://www.example.com/">Home sweet home</a>	
-</div> 
+</span></div> 
 
 
 
