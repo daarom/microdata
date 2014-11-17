@@ -1,0 +1,87 @@
+<!-- header logo, koppelen aan organisatie, via itemref & id -->
+<!-- whether the "a" property comes before the "b" property or not is not important: -->
+<!-- http://www.w3.org/TR/microdata/ -->
+
+<div itemscope id="vincentlogo">
+  <img itemprop="logo" src="http://www.example.com/logo.png" />
+  <a itemprop="url" href="http://www.example.com/">Home sweet home</a>	
+</div> 
+
+
+
+<!-- Seller Details -->
+<div itemscope itemtype="http://schema.org/TravelAgency" itemref="vincentlogo vincentoffer">
+  		<h2 itemprop="name">Vincent inc. - Online reisaanbieder</h2>
+			<div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">		
+			Mijn address:
+			  <span itemprop="streetAddress">Weteringkade</span>
+			  <span itemprop="postalCode">1235aa</span>
+			  <span itemprop="addressLocality">Noordwijk, Nederland</span>
+				<br>
+			Tel:<span itemprop="telephone">(31) 12 34 56 00 </span>,
+			Fax:<span itemprop="faxNumber">(31) 12 34 46 01 </span>,
+			E-mail: <span itemprop="email">vincent(at)example.com</span>
+	</div></div>
+	
+<div itemprop="makesOffer" itemscope itemtype="http://schema.org/Offer" id="vincentoffer" >
+
+
+<!-- Reservation Details -->
+	<div itemprop="itemOffered" itemscope itemtype="http://schema.org/LodgingReservation">
+		
+		      	<time itemprop="checkinTime" datetime="2014-11-05T08:30:00-08:00"/>
+				<time itemprop="checkoutTime" datetime="2014-11-09T08:30:00-08:00"/>	
+	
+		<div itemprop="reservationFor" itemscope itemtype="http://schema.org/LodgingBusiness" id="hoteldebotel">	
+		<h1 itemprop="name">Holliday Inn lost paradise </h1> 
+	  	<p itemprop="description">Lost paradise is prachtig en de Holliday inn ook!</p>
+  		<img itemprop="image" src="http://example.com/paradise-05.jpg" alt="mooi plaatje" >
+			
+					  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+						  <span itemprop="streetAddress">123 boulevard</span><br>
+						  <span itemprop="postalCode">1234aa</span> - <span itemprop="addressLocality">Lost Paradise</span><br>
+						  <span itemprop="addressRegion">Zuid Holland</span><br>
+						  <span itemprop="addressCountry">The Netherlands</span><br>
+					  </div>
+			
+					 <div itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+   							Rated <span itemprop="ratingValue">3.5</span>/5
+   							based on <span itemprop="reviewCount">11</span> customer reviews
+  					</div>
+						
+
+		</div>
+	</div>
+<!-- /Reservation Details -->	
+<br><br>	
+
+<!-- reviews ergens anders op de pagina, verbonden via ref & id -->		
+<div itemscope itemref="hoteldebotel">
+<h3>Customer reviews:</h3>
+  <div itemprop="review" itemscope itemtype="http://schema.org/Review">
+    <span itemprop="name">Not a happy camper</span> -
+    by <span itemprop="author">Ellie</span>,
+    <meta itemprop="datePublished" content="2014-04-01">April 1, 2014
+    <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+      <meta itemprop="worstRating" content = "1">
+      <span itemprop="ratingValue">1</span>/
+      <span itemprop="bestRating">5</span>stars
+    </div>
+    <span itemprop="description">The place burned out and now I have to clean
+    it. </span>
+  </div><br>
+  <div itemprop="review" itemscope itemtype="http://schema.org/Review">
+    <span itemprop="name">Value purchase</span> -
+    by <span itemprop="author">Lucas</span>,
+    <meta itemprop="datePublished" content="2014-03-25">March 25, 2014
+    <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+      <meta itemprop="worstRating" content = "1"/>
+      <span itemprop="ratingValue">4</span>/
+      <span itemprop="bestRating">5</span>stars
+    </div>
+    <span itemprop="description">I love this place.</span>
+  </div>
+</div>
+<!-- /reviews ergens anders op de pagina, verbonden via ref & id -->		
+
+</div>
